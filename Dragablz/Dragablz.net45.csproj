@@ -110,6 +110,11 @@
     <Compile Include="Core\InterTabTransfer.cs" />
     <Compile Include="LocationHint.cs" />
     <Compile Include="MoveItemRequest.cs" />
+    <Compile Include="Savablz\BranchItemState.cs" />
+    <Compile Include="Savablz\BranchState.cs" />
+    <Compile Include="Savablz\TabSetState.cs" />
+    <Compile Include="Savablz\LayoutWindowState.cs" />
+    <Compile Include="Savablz\WindowsStateSaver.cs" />
     <Compile Include="StackOrganiser.cs" />
     <Compile Include="LocationChangedEventArgs.cs" />
     <Compile Include="Core\Native.cs" />
@@ -174,13 +179,16 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Dragablz.nuspec" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="LICENSE.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

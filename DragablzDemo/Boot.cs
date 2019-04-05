@@ -52,7 +52,7 @@ namespace DragablzDemo
                 //new HeaderedItemViewModel { Header = "Thu", Content = "Thursday's child has far to go" },
                 //new HeaderedItemViewModel { Header = "Fri", Content = "Friday's child loving and giving" }//,
                 //new HeaderedItemViewModel { Header = "Sat", Content = "Saturday's child works hard for a living" },
-                //new HeaderedItemViewModel { Header = "Sun", Content = "Sunday's child is awkwardly not fitting into this demo" }                 
+                //new HeaderedItemViewModel { Header = "Sun", Content = "Sunday's child is awkwardly not fitting into this demo" }
             );
             boundExampleModel.ToolItems.Add(
                 new HeaderedItemViewModel {Header = "January", Content = "Welcome to the January tool/float item."});
@@ -71,6 +71,8 @@ namespace DragablzDemo
 
             new BoundExampleWindow()
             {
+                Height = 800,
+                Width = 1500,
                 DataContext = boundExampleModel
             }.Show();
 
@@ -78,5 +80,5 @@ namespace DragablzDemo
         }
     }
 
-    
+
 }

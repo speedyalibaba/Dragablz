@@ -8,7 +8,10 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300"
              d:DataContext="{d:DesignInstance dragablzDemo:CustomHeaderViewModel, IsDesignTimeCreatable=False}">
-    
+    <UserControl.InputBindings>
+        <MouseBinding Command="dragablz:TabablzControl.CloseItemCommand" MouseAction="MiddleClick" />
+    </UserControl.InputBindings>
+
     <!--     
         Illustrates how to add a custom header, without completely rewriting the DragablzItem header template.
     
