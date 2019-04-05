@@ -36,7 +36,7 @@
             <Setter Property="HeaderSuffixContentTemplate">
                 <Setter.Value>
                     <DataTemplate>
-                        <TextBlock Text="☻" ToolTip="You can easily insert content here using HeaderSuffixContent" Margin="2 0 2 0"/>
+                        <TextBlock Text="{Binding HeaderSuffixContent}" ToolTip="You can easily insert content here using HeaderSuffixContent" Margin="2 0 2 0"/>
                     </DataTemplate>
                 </Setter.Value>
             </Setter>

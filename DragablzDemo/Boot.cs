@@ -71,6 +71,8 @@ namespace DragablzDemo
 
             new BoundExampleWindow()
             {
+                Height = 800,
+                Width = 1500,
                 DataContext = boundExampleModel
             }.Show();
 

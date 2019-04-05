@@ -1,6 +1,8 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Data;
 using System.Windows.Input;
 using Dragablz;
 using Dragablz.Dockablz;
@@ -45,12 +47,12 @@ namespace DragablzDemo
 
         private void Branch(Orientation orientation)
         {
-            var branchResult = Layout.Branch(_tabablzControl, orientation, false, SplitRatio/10);
+            var branchResult = Layout.Branch(_tabablzControl, GetNew(_tabablzControl), orientation, false, SplitRatio/10);
 
             var newItem = new HeaderedItemViewModel
             {
-                Header = "Code-Wise",
-                Content = "This item was added in via code, using Layout.Branch, and TabablzControl.AddToSource"
+                Header = "Layout Info",
+                Content = new LayoutManagementExample { DataContext = new LayoutManagementExampleViewModel() }
             };
 
             branchResult.TabablzControl.AddToSource(newItem);
@@ -63,6 +65,34 @@ namespace DragablzDemo
         {
             var handler = PropertyChanged;
             if (handler != null) handler(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        public TabablzControl GetNew(TabablzControl source)
+        {
+            var tabablzControl = new TabablzControl { DataContext = source.DataContext };
+
+            Clone(source, tabablzControl);
+
+            var newInterTabController = new InterTabController
+            {
+                Partition = source.InterTabController.Partition
+            };
+            Clone(source.InterTabController, newInterTabController);
+            tabablzControl.SetCurrentValue(TabablzControl.InterTabControllerProperty, newInterTabController);
+            return tabablzControl;
+        }
+
+        private static void Clone(DependencyObject from, DependencyObject to)
+        {
+            var localValueEnumerator = from.GetLocalValueEnumerator();
+            while (localValueEnumerator.MoveNext())
+            {
+                if (localValueEnumerator.Current.Property.ReadOnly ||
+                    localValueEnumerator.Current.Value is FrameworkElement) continue;
+
+                if (!(localValueEnumerator.Current.Value is BindingExpressionBase))
+                    to.SetCurrentValue(localValueEnumerator.Current.Property, localValueEnumerator.Current.Value);
+            }
         }
     }
 }
