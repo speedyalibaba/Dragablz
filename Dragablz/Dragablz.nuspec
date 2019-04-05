@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Savablz</id>
-    <version>0.0.3.211</version>
+    <version>0.0.3.212</version>
     <title>Dragablz - Dragable and tearable tab control for WPF</title>
     <authors>speedyalibaba, jeremyVignelles, James Willock</authors>
     <owners>James Willock</owners>
