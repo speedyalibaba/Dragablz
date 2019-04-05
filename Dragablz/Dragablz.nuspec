@@ -4,7 +4,7 @@
     <id>Savablz</id>
     <version>0.0.3.211</version>
     <title>Dragablz - Dragable and tearable tab control for WPF</title>
-    <authors>James Willock</authors>
+    <authors>speedyalibaba, jeremyVignelles, James Willock</authors>
     <owners>James Willock</owners>
     <iconUrl>https://raw.githubusercontent.com/ButchersBoy/Dragablz/master/Resources/D32.png</iconUrl>
     <license type="file">LICENSE.txt</license>
