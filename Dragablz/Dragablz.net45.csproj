@@ -185,6 +185,8 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
+    <None Include="SavablzReleasedPackages\Savablz.0.0.3.211.nupkg" />
+    <None Include="SavablzReleasedPackages\Savablz.0.0.3.212.nupkg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="LICENSE.txt" />
