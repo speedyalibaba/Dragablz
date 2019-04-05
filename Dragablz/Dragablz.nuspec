@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>Dragablz</id>
+    <id>Savablz</id>
     <version>0.0.3.211</version>
     <title>Dragablz - Dragable and tearable tab control for WPF</title>
     <authors>James Willock</authors>
     <owners>James Willock</owners>
     <iconUrl>https://raw.githubusercontent.com/ButchersBoy/Dragablz/master/Resources/D32.png</iconUrl>
-    <licenseUrl>https://raw.githubusercontent.com/ButchersBoy/Dragablz/master/LICENSE</licenseUrl>
-    <projectUrl>http://dragablz.net</projectUrl>    
+    <license type="file">LICENSE.txt</license>
+    <projectUrl>https://github.com/speedyalibaba/Dragablz</projectUrl>    
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Dragable and tearable tab control for WPF</description>
     <releaseNotes>We are in alpha right now!.</releaseNotes>
@@ -21,8 +21,9 @@
     <file src="..\bin\Release_net45\Dragablz.xml" target="lib\net45" />
     <file src="..\bin\Release_net40\Dragablz.dll" target="lib\net40" />
     <file src="..\bin\Release_net40\Dragablz.pdb" target="lib\net40" />
-    <file src="..\bin\Release_net40\Dragablz.xml" target="lib\net40" />	
+    <file src="..\bin\Release_net40\Dragablz.xml" target="lib\net40" />
     <file src="..\Dragablz\**\*.cs" target="src\net45" />
     <file src="..\Dragablz\**\*.cs" target="src\net40" />
+    <file src="LICENSE.txt" target="" />
   </files>  
 </package>
