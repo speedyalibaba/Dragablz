@@ -882,6 +882,8 @@ namespace Dragablz
 
         private void WindowOnClosing(object sender, CancelEventArgs cancelEventArgs)
         {
+            if (cancelEventArgs.Cancel) return;
+
             _windowSubscription.Disposable = Disposable.Empty;
             if (!ConsolidateOrphanedItems || InterTabController == null) return;
 
