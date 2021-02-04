@@ -882,6 +882,8 @@ namespace Dragablz
 
         private void WindowOnClosing(object sender, CancelEventArgs cancelEventArgs)
         {
+            if (cancelEventArgs.Cancel) return;
+
             _windowSubscription.Disposable = Disposable.Empty;
             if (!ConsolidateOrphanedItems || InterTabController == null) return;
 
@@ -905,7 +907,8 @@ namespace Dragablz
                     .FirstOrDefault(
                         other =>
                             other.InterTabController != null &&
-                            other.InterTabController.Partition == InterTabController.Partition);
+                            other.InterTabController.Partition == InterTabController.Partition &&
+                            window != Window.GetWindow(other));
             if (target == null) return;
 
             foreach (var item in orphanedItems.Select(orphanedItem => _dragablzItemsControl.ItemContainerGenerator.ItemFromContainer(orphanedItem)))
